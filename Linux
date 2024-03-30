@@ -1,0 +1,24 @@
+Ansible:
+
+Set Repository in RHEL 9.1
+#cd /etc/yum.repos.d/
+#ll
+#vim local.repo (create this file)
+
+[BASEID]
+name=BaseOS
+baseurl=file:///run/media/lalit/RHEL-9-1-0-BaseOS-x86_64BaseOS
+gpgcheck=0
+enabled=1
+
+[APPID]
+name=Apps
+baseurl=file:///run/media/lalit/RHEL-9-1-0-BaseOS-x86_64/AppStream
+gpgcheck=0
+enabled=1
+:wq!
+
+#dnf repolist all
+
+
+
